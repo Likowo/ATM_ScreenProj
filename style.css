@@ -1,9 +1,23 @@
 .mainFrame{
-    border: 3px solid black;
+    border: 5px solid black;
     margin:5%;
+    height: 300px;
+    display: flex;
+    flex-direction:column;
 }
 
 .screen{
     border: 2px solid gray;
     text-align: center;
+    padding: 50px;
 }
+
+.buttons{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+
+
+   
