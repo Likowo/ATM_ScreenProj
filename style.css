@@ -1,0 +1,9 @@
+.mainFrame{
+    border: 3px solid black;
+    margin:5%;
+}
+
+.screen{
+    border: 2px solid gray;
+    text-align: center;
+}
