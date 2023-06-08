@@ -1,38 +1,101 @@
+
 <!DOCTYPE html>
-
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <title>ATM</title>
-</head>
-<body>
-           <!-- ATM Screen -->
-           <!-- mainFrame -->
-    <div class="mainFrame">
-    <!-- Screen - Welcome to Dream Big Bank -->
-      <div class="screen">WELCOME TO DREAM BIG BANK</div>
-    <!-- 3 leftButtons -->
-      <div class="buttons">
-        <div class="leftButtons">
-            <button onclick="withdrawalFromBalance()">Withdrawal</button>
-            <button onclick="addDeposit()">Deposit</button>
-            <button onclick="reset()">RESET</button>
-        </div>
-
-    <!-- 3 rightButtons -->
-        <div class="rightButtons">
-            <button onclick="displayBalance()">Balance</button>
-           <button onclick="fastCash()">Fast Cash</button>
-           <button onclick="transfer()">Transfer</button>
-        </div>
-      </div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
         
+        <!-- ATM Screen -->
+        <!-- mainFrame -->
+    <div class="mainFrame">
+        <!-- Screen - Welcome to Dream Big Bank -->
+          <div class="screen">
+            <p class="title">WELCOME TO DREAM BIG BANK</p>
+            <p class="amount">258</p>
+          </div>
+        <!-- 3 leftButtons -->
+          <div class="buttons">
+            <div class="leftButtons">
+                <button class="withdrawal">Withdrawal</button>
+                <button class="deposit">Deposit</button>
+                <button class="reset">RESET</button>
+            </div>
+    
+        <!-- 3 rightButtons -->
+            <div class="rightButtons">
+                <button class="balance">Balance</button>
+               <button class="fastCash">Fast Cash</button>
+               <button class="transfer">Transfer</button>
+            </div>
+          </div>
+            
+        </div>
+        <!-- KeyPad frame -->
+    <div class="keyPadFrame">
+          <!-- 4 row and 4 buttons -->
+        <div class="row1">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="cancel">CANCEL</button>
+        </div>
+        <div class="row2">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="clear">CLEAR</button>
+        </div>
+        <div class="row3">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="help">HELP</button>
+        </div>
+        <div class="row4">
+            <button>-</button>
+            <button>0</button>
+            <button>+</button>
+            <button class="enter">ENTER</button>
+        </div>
     </div>
+        
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
 
-    <script src="script.js"></script>
-</body>
-</html> 
+<!--  <input type="button" value="Withdrawal" class="withdrawal" onclick="withdrawalFromBalance()"> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
