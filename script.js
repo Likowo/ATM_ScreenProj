@@ -20,6 +20,25 @@ const transferButton = document.querySelector('.transfer')
 
 //Key Pad
 
+const keys = document.querySelectorAll('.keyPadFrame button')
+// console.log(keys)
+// keys.forEach((key) => {
+//     console.log(key.innerText)
+// })
+
+const cancelButton = document.querySelector('.cancel')
+const clearButton = document.querySelector('.clear')
+const helpButton = document.querySelector('.help')
+const enterButton = document.querySelector('.enter')
+
+const alertHelp = () => {
+    alert('Help is on the way')
+}
+
+const clearAmount = () => {
+    amount.innerText = ""
+}
+
 
 
 
