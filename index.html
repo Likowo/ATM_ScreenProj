@@ -11,60 +11,60 @@
     </head>
     <body>
         
-        <!-- ATM Screen -->
+        <!-- ATM Machine -->
+  <div class="atmMachine" >
         <!-- mainFrame -->
     <div class="mainFrame">
-        <!-- Screen - Welcome to Dream Big Bank -->
-          <div class="screen">
-            <p class="title">WELCOME TO DREAM BIG BANK</p>
-            <p class="amount">AMOUNT:  $ </p>
-          </div>
+           <!-- Screen - Welcome to Dream Big Bank -->
+      <div class="screen">
+            <p class="title">WELCOME TO DREAM BIG BANK <br> ( Currency Exchange Made Simple !! ) </p>
+            <p class="amount">AMOUNT IN DOLLARS  ($) </p>
+      </div>
     
-        <!-- 3 leftButtons -->
-          <div class="buttons" wrap="hard">
-            <div class="leftButtons" wrap="hard">
+       <!-- Instruction Buttons ( withdrawal,Deposit,Balance,Reset,FastCash,Transfer) -->
+    <div class="buttons" wrap="hard">
+            <!-- 3 Left Instruction Buttons -->
+          <div class="leftButtons" wrap="hard">
                 <button onclick="displayWithDrawalAmount()" class="withdrawal">Withdrawal</button>
                 <button  onclick="displaydepositAmount()" class="deposit">Deposit</button>
                 <button onclick="returnToScreen()" class="reset">RESET</button>
-            </div>
-    
-        <!-- 3 rightButtons -->
-            <div class="rightButtons" wrap="hard">
+          </div>
+        <!-- 3 Right InstructionButtons -->
+          <div class="rightButtons" wrap="hard">
                 <button onclick="checkBalance()" class="balance">Balance</button>
                <button class="fastCash">Fast Cash</button>
                <button class="transfer">Transfer</button>
-            </div>
           </div>
-    
-        <!-- KeyPad frame -->
-     <div class="keyPadFrame" wrap="hard">
+    </div>  
+        <!-- ATM keyPad Number Buttons -->
+    <div class="keyPadFrame" wrap="hard">
           <!-- 4 row and 4 buttons -->
         <div class="row1">
-            <button class="btn1">1</button>
-            <button class="btn2" >2</button>
-            <button class="btn3" >3</button>
+            <button onclick="upLoadToScreen('1')" class="btn1">1</button>
+            <button onclick="upLoadToScreen('2')" class="btn2" >2</button>
+            <button onclick="upLoadToScreen('3')" class="btn3" >3</button>
             <button class="cancel">CANCEL</button>
         </div>
         <div class="row2">
-            <button class="btn4" >4</button>
-            <button class="btn5" >5</button>
-            <button class="btn6" >6</button>
+            <button onclick="upLoadToScreen('4')" class="btn4" >4</button>
+            <button onclick="upLoadToScreen('5')" class="btn5" >5</button>
+            <button onclick="upLoadToScreen('6')" class="btn6" >6</button>
             <button onclick="clearAmount()" class="clear">CLEAR</button>
         </div>
         <div class="row3">
-            <button class="btn7" >7</button>
-            <button class="btn8" >8</button>
-            <button class="btn9" >9</button>
+            <button onclick="upLoadToScreen('7')" class="btn7" >7</button>
+            <button onclick="upLoadToScreen('8')" class="btn8" >8</button>
+            <button onclick="upLoadToScreen('9')" class="btn9" >9</button>
             <button onclick="alertHelp()" class="help">HELP</button>
         </div>
         <div class="row4">
-            <button class="minusbtn" >-</button>
-            <button class="btn0" >0</button>
-            <button class="plusbtn" >+</button>
+            <button onclick="upLoadToScreen('-')" class="minusbtn" >-</button>
+            <button onclick="upLoadToScreen('0')" class="btn0" >0</button>
+            <button onclick="upLoadToScreen('+')" class="plusbtn" >+</button>
             <button class="enter">ENTER</button>
         </div>
-      </div>
     </div>    
+  </div>  
         
         <script src="script.js" async defer></script>
     </body>

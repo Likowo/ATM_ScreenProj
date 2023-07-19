@@ -11,7 +11,7 @@ console.log(title)
 
 // =========== {LeftButtons} -- Selecting the elements from the DOM(HTML tags) and creating fxns to make the elements functional.
     //How to make the Withdrawal button functional
-       //  1) Select elements from the DOM (HTML tags)
+       //  1) First Select element(s) from the DOM (HTML tags) that needs to be updated when app is in use
 let amount = document.querySelector('.amount')
 const withdrawalButton = document.querySelector('.withdrawal')
       //2) Declare function  
@@ -25,7 +25,7 @@ const displayWithDrawalAmount = () => {
 console.log(displayWithDrawalAmount)
 
      //How to make the Deposit button functional
-        //  1) Select elements from the DOM (HTML tags)
+        //  1) First Select element(s) from the DOM (HTML tags) that needs to be updated when app is in use
 const depositButton = document.querySelector('.deposit')
         //2) Declare function 
         depositButton.addEventListener("click",  displaydepositAmount= () => {
@@ -41,7 +41,7 @@ const depositButton = document.querySelector('.deposit')
 // console.log(displayWithDrawalAmount)
 
      //How to make the Reset button functional
-         //  1) Select elements from the DOM (HTML tags)
+         //  1) Select element(s) from the DOM (HTML tags)
 const resetButton = document.querySelector('.reset')
          //2) Declare function
 const returnToScreen = () => {
@@ -79,7 +79,7 @@ const cancelButton = document.querySelector('.cancel')
 const enterButton = document.querySelector('.enter')
 
 // How to clear amount from screen
-     //1) First select elements to be updated ( in this case; (i) class name "amount" from p tag and (ii) class name "clear" from div class "row2")
+     //1) First select element(s) to be updated ( in this case; (i) class name "amount" from p tag and (ii) class name "clear" from div class "row2")
 amount = document.querySelector('.amount')
 console.log(amount)
 const clearButton = document.querySelector('.clear')
@@ -90,20 +90,28 @@ amount.innerText = ""
 }
 
 // How to make the HELP button functional
-   //1) First select elements to be updated ( in this case; class name "help" from div class "row3")
+   //1) First select element(s) to be updated ( in this case; class name "help" from div class "row3")
 const helpButton = document.querySelector('.help')
      //2)Now declare a function that makes the HELP button functional when clicked, In this app, the alert function is being used.
 const alertHelp = () => {
         alert('Help is on the way')
 }
 
-// How to make the Number buttons functional
-//==> btn1
-const btn1 = document.querySelector(".btn1");
-btn1.addEventListener('onClick',  displayButton1 (() => {
-    amount.innerHTML = 1 
-}))
-console.log(displayButton1)
+// How to make the  buttons on the ATM KeyPad functional ( i.e Clickable)
+//1) First select element(s) to be updated ( in this case; class name "help" from div class "row3")
+let screen = document.querySelector('.screen')
+
+const upLoadToScreen = (number) => {
+    screen.append(number)
+}
+
+
+//===================================
+// const btn1 = document.querySelector(".btn1");
+// btn1.addEventListener('onClick',  displayButton1 (() => {
+//     amount.innerHTML = 1 
+// }))
+// console.log(displayButton1)
 
 
 

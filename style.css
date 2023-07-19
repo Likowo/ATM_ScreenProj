@@ -5,11 +5,20 @@ body{
     background-color: grey;
 }
 
+.atmMachine{
+    border: solid 10px orange;
+    height: 580px;
+    width: 900px;
+    margin: auto;
+    margin-top: 30%;
+    background-color: black; 
+    background-attachment: fixed;
+}
+
 .mainFrame{
     border: 5px solid rgb(18, 82, 243);
     border-radius: 4%;
     margin:5%, 10%,10%,2%;
-    margin-top:20%;
     height: 240px;
     display: flex;
     flex-direction:column;
@@ -67,10 +76,10 @@ body{
     font-size: 20px;
     box-shadow: inset 10px,5px,10px,5px black; 
 }
-/* .KeyPadFrame{
+/* .keyPadFrame{
     border: solid 10px red;
     background-color: black;
-    width:50px;
+    width:885px;
     height: 100%;
 } */
 
@@ -81,7 +90,7 @@ body{
 
 .btn1, .btn2, .btn3,.cancel,.btn4, .btn5, .btn6,.clear,.btn7,.btn8, .btn9, .help, .minusbtn,.btn0, .plusbtn, .enter{
     cursor: pointer;
-    border: solid 4px blue;
+    border: solid 3px blue;
     border-radius: 35%;
     width: 22%;
     height: 40%;
