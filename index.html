@@ -21,23 +21,23 @@
           </div>
     
         <!-- 3 leftButtons -->
-          <div class="buttons">
-            <div class="leftButtons">
-                <button class="withdrawal">Withdrawal</button>
-                <button class="deposit">Deposit</button>
-                <button class="reset">RESET</button>
+          <div class="buttons" wrap="hard">
+            <div class="leftButtons" wrap="hard">
+                <button onclick="displayWithDrawalAmount()" class="withdrawal">Withdrawal</button>
+                <button  onclick="displaydepositAmount()" class="deposit">Deposit</button>
+                <button onclick="returnToScreen()" class="reset">RESET</button>
             </div>
     
         <!-- 3 rightButtons -->
-            <div class="rightButtons">
-                <button class="balance">Balance</button>
+            <div class="rightButtons" wrap="hard">
+                <button onclick="checkBalance()" class="balance">Balance</button>
                <button class="fastCash">Fast Cash</button>
                <button class="transfer">Transfer</button>
             </div>
           </div>
     
         <!-- KeyPad frame -->
-     <div class="keyPadFrame">
+     <div class="keyPadFrame" wrap="hard">
           <!-- 4 row and 4 buttons -->
         <div class="row1">
             <button class="btn1">1</button>
