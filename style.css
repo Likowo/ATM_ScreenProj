@@ -19,7 +19,7 @@ body{
     border: 5px solid rgb(18, 82, 243);
     border-radius: 4%;
     margin:5%, 10%,10%,2%;
-    height: 240px;
+    height: 260px;
     display: flex;
     flex-direction:column;
     width:900px;
@@ -33,7 +33,14 @@ body{
 .screen{
     /* border: 2px solid gray; */
     text-align: center;
-    padding: 50px;
+    padding: 10px;
+    height: fit-content;
+}
+
+.userInput {
+    border: solid 2px yellow;
+    /* height: 100px; */
+    color: black;
 }
 
 .buttons{

@@ -19,6 +19,7 @@
       <div class="screen">
             <p class="title">WELCOME TO DREAM BIG BANK <br> ( Currency Exchange Made Simple !! ) </p>
             <p class="amount">AMOUNT IN DOLLARS  ($) </p>
+            <div class="userInput" ></div>
       </div>
     
        <!-- Instruction Buttons ( withdrawal,Deposit,Balance,Reset,FastCash,Transfer) -->
@@ -61,7 +62,7 @@
             <button onclick="upLoadToScreen('-')" class="minusbtn" >-</button>
             <button onclick="upLoadToScreen('0')" class="btn0" >0</button>
             <button onclick="upLoadToScreen('+')" class="plusbtn" >+</button>
-            <button class="enter">ENTER</button>
+            <button onclick="readInput()"  class="enter">ENTER</button>
         </div>
     </div>    
   </div>  

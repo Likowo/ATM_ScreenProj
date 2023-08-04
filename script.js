@@ -2,8 +2,13 @@
 // Assigment: Data put in to the space created by the declaration e.g " WELCOME TO DREAM BIG BANK" is placed/stored in that space in memory called 'Screen'
 
 const initialBalanceAmount = 1000   //This is the initial balance amount
+let currentBalance = initialBalanceAmount
+let currentInput = 0
+let mode = " "
+const userInputDiv = document.querySelector(".userInput")
 const title = document.querySelector('.title')
 console.log(title)
+userInputDiv.innerHTML = ' '
 // title.innerText = 'gah' === telling the title to change it's inner text to the string gah
 
 // const amount = document.querySelector('.amount')
@@ -16,12 +21,18 @@ console.log(title)
 // let screen = document.querySelector('.screen')
 let amount = document.querySelector('.amount')
 const withdrawalButton = document.querySelector('.withdrawal')
+
       //2) Declare a function that makes the withdrawal button functional when clicked ; using the addEventListener() method, and Function Declaration, for this button.
 
 withdrawalButton.addEventListener('click', function() {
-    const displayWithDrawalAmount = parseInt(prompt('How much do you want to withdrawal from your account ?'))
-    const newBalance = initialBalanceAmount - displayWithDrawalAmount
-    amount.innerText = newBalance
+    // const displayWithDrawalAmount = parseInt(prompt('How much do you want to withdrawal from your account ?'))
+    mode = "w"
+    amount.innerHTML +=  ' <br> How much do you want to withdrawal from your account ?' 
+    document.querySelector(".userInput").innerHTML = " "
+
+    //  currentBalance = currentBalance - currentInput
+    // amount.innerHTML += currentBalance
+   
 })
     // console.log(displayWithDrawalAmount)
 
@@ -29,10 +40,11 @@ withdrawalButton.addEventListener('click', function() {
         //  1) First Select element(s) from the DOM (HTML tags) that needs to be updated when app is in use.
 const depositButton = document.querySelector('.deposit')
         //2) Declare a function that makes the Deposit button functional when clicked ; using the addEventListener() method, and  Arrow Function, for this button. 
+
 depositButton.addEventListener("click",  displaydepositAmount = () => {
-const depositAmount = parseInt(prompt("How much do you want to add to your Account"))
-const newBalance = initialBalanceAmount + depositAmount
-amount.innerHTML = newBalance
+    mode = "d"
+amount.innerHTML +=  ' <br> "How much do you want to add to your Account" ?' 
+    document.querySelector(".userInput").innerHTML = " "
 } )
 //alert('You just Added (depositAmount) to your Account')
 console.log(displaydepositAmount)
@@ -42,7 +54,8 @@ console.log(displaydepositAmount)
 const resetButton = document.querySelector('.reset')
          //2) Declare a function  that makes the RESET button functional when clicked ; using the reload() method for this button. i.e //To avoid clicking the refresh button to reload your app or page, use the reload() method  and then passing as argument, the button name you want to use as the refesh button.
 const returnToScreen = () => {
-       location.reload(resetButton)
+    amount.innerHTML = " Welcome"
+    //    location.reload(resetButton)
 }
  console.log(returnToScreen)
 
@@ -55,43 +68,10 @@ const balanceButton = document.querySelector('.balance')
         // let currentAmount = " ";
         // let newAmount = currentAmount- withdrawal;  
 const checkBalance = () => {
-    const newBalance = `Your Balance is ${initialBalanceAmount}`;
-amount.innerText = newBalance
+amount.innerText = `Your Balance is ${currentBalance}`
 };
- console.log(checkBalance)
+//  console.log(checkBalance)
 
- //fxn to display balance --Usx arrow fxn syntax
-let Balance = Math.floor(Math.random() * 5000) + 1;
-let withdrawalNumber = Math.floor(Math.random() * 500) + 1;
-let depositNumber = Math.floor(Math.random() * 10000) + 1;
-
-console.log("random balance:",Balance)
-console.log("withdrawal amount:",withdrawalNumber)
-console.log("deposit:",depositNumber)
-
- //To display balance on screen
- const displaybalance = () => {
- screen.innerHTML ="Current Balance: $ "+ Balance
-
- screen.innertext = Balance
-screen.textContent = Balance
-displaybalance()
-
-// // subtrate withdrawalNumber from balance
-
-const withdrawalFromBalance = () => {
-    let newBalance = Balance - withdrawalNumber
-    console.log("new balance after withdrawal: $",Balance)
-
-if(newBalance >= 0){
-    Balance = Balance - withdrawalNumber
-    screen.innerText= `Current Balance: $,Balance`
-}else {
-        screen.innerText = "Insufficient Funds"
-    }
-}
- }
- 
 const fastCashButton = document.querySelector('.fastCash')
 const transferButton = document.querySelector('.transfer')
 
@@ -107,7 +87,22 @@ keys.forEach((key) => {
 // const amount = document.querySelector('.amount')
 // const helpButton = document.querySelector('.help')
 const cancelButton = document.querySelector('.cancel')
+
 const enterButton = document.querySelector('.enter')
+const readInput = () => {
+   currentInput = parseInt(userInputDiv.innerHTML)
+   userInputDiv.innerHTML = " "
+   console.log(currentInput)
+   if(mode === 'w'){
+    const newBalance = currentBalance - currentInput
+    currentBalance = newBalance
+  }
+   if(mode === 'd'){
+    const newBalance = currentBalance + currentInput
+    currentBalance = newBalance
+  }
+
+}
 
 // How to clear amount from screen
      //1) First select element(s) to be updated ( in this case; (i) class name "amount" from p tag and (ii) class name "clear" from div class "row2")
@@ -135,7 +130,7 @@ const alertHelp = () => {
 let screen = document.querySelector('.screen')
     //2)Now declare a function that makes each button appear on the screen when clicked;for this buttons, the append() method is being used.
 const upLoadToScreen = (number) => {
-    screen.append(number)
+    userInputDiv.innerHTML += number
 }
 
 
