@@ -1,6 +1,7 @@
 // Declaration: e.g let screen -- Creates a space in memory called 'Screen'
 // Assigment: Data put in to the space created by the declaration e.g " WELCOME TO DREAM BIG BANK" is placed/stored in that space in memory called 'Screen'
 
+const initialBalanceAmount = 1000   //This is the initial balance amount
 const title = document.querySelector('.title')
 console.log(title)
 // title.innerText = 'gah' === telling the title to change it's inner text to the string gah
@@ -18,8 +19,9 @@ const withdrawalButton = document.querySelector('.withdrawal')
       //2) Declare a function that makes the withdrawal button functional when clicked ; using the addEventListener() method, and Function Declaration, for this button.
 
 withdrawalButton.addEventListener('click', function() {
-    const displayWithDrawalAmount = prompt('How much do you want to withdrawal from your account ?')
-    amount.innerText = displayWithDrawalAmount 
+    const displayWithDrawalAmount = parseInt(prompt('How much do you want to withdrawal from your account ?'))
+    const newBalance = initialBalanceAmount - displayWithDrawalAmount
+    amount.innerText = newBalance
 })
     // console.log(displayWithDrawalAmount)
 
@@ -28,8 +30,9 @@ withdrawalButton.addEventListener('click', function() {
 const depositButton = document.querySelector('.deposit')
         //2) Declare a function that makes the Deposit button functional when clicked ; using the addEventListener() method, and  Arrow Function, for this button. 
 depositButton.addEventListener("click",  displaydepositAmount = () => {
-const depositAmount = prompt("How much do you want to add to your Account")
-amount.innerHTML = depositAmount 
+const depositAmount = parseInt(prompt("How much do you want to add to your Account"))
+const newBalance = initialBalanceAmount + depositAmount
+amount.innerHTML = newBalance
 } )
 //alert('You just Added (depositAmount) to your Account')
 console.log(displaydepositAmount)
@@ -52,12 +55,43 @@ const balanceButton = document.querySelector('.balance')
         // let currentAmount = " ";
         // let newAmount = currentAmount- withdrawal;  
 const checkBalance = () => {
-    const newbalance = 'Your Balance is ___';
-amount.innerText = newbalance
-
+    const newBalance = `Your Balance is ${initialBalanceAmount}`;
+amount.innerText = newBalance
 };
  console.log(checkBalance)
 
+ //fxn to display balance --Usx arrow fxn syntax
+let Balance = Math.floor(Math.random() * 5000) + 1;
+let withdrawalNumber = Math.floor(Math.random() * 500) + 1;
+let depositNumber = Math.floor(Math.random() * 10000) + 1;
+
+console.log("random balance:",Balance)
+console.log("withdrawal amount:",withdrawalNumber)
+console.log("deposit:",depositNumber)
+
+ //To display balance on screen
+ const displaybalance = () => {
+ screen.innerHTML ="Current Balance: $ "+ Balance
+
+ screen.innertext = Balance
+screen.textContent = Balance
+displaybalance()
+
+// // subtrate withdrawalNumber from balance
+
+const withdrawalFromBalance = () => {
+    let newBalance = Balance - withdrawalNumber
+    console.log("new balance after withdrawal: $",Balance)
+
+if(newBalance >= 0){
+    Balance = Balance - withdrawalNumber
+    screen.innerText= `Current Balance: $,Balance`
+}else {
+        screen.innerText = "Insufficient Funds"
+    }
+}
+ }
+ 
 const fastCashButton = document.querySelector('.fastCash')
 const transferButton = document.querySelector('.transfer')
 
